@@ -13,6 +13,7 @@ function convert() {
     const temperature = document.querySelector('#temp').value
 
     if (validationChecks(temperature, unitOfMeasurementFrom, unitOfMeasurementTo)) {
+        setBackgroundImage(unitOfMeasurementTo);
         if (unitOfMeasurementFrom === "F") {
             convertFahrenheitToCelsius();
         } else {
@@ -48,4 +49,19 @@ function convertFahrenheitToCelsius() {
     const temperature = document.querySelector('#temp').value
     let result = (temperature - 32) * 5/9;
     document.querySelector('#conversion').innerText = `${result}`
+}
+
+function setBackgroundImage(unitOfMeasurementTo) {
+    let countriesUsingCelsiusImages = ["../img/Japan.jpg", "../img/national-flag-canada.jpg"]
+    let countriesUsingFahrenheitImages = ["../img/flag-of-belize.jpg", "../img/usa-1645659327538-4524.jpg"]
+    let index;
+    let image;
+    if (unitOfMeasurementTo === 'C') {
+        index = Math.floor(Math.random() * countriesUsingCelsiusImages.length)
+        image = countriesUsingCelsiusImages[index]
+    } else {
+        index = Math.floor(Math.random() * countriesUsingFahrenheitImages.length)
+        image = countriesUsingFahrenheitImages[index]
+    }
+    document.body.style.background = `url(${image})`
 }

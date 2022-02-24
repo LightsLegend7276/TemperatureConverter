@@ -11,32 +11,31 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
-	<body>
+	<body id="body">
+		<main>
+			<h1>Temperature Converter</h1>
 
-		<h1>Temperature Converter</h1>
-
-		<form>
-			<label for="temp"> Temp: </label>
-			<input id="temp" type="text" placeholder="Temperature">
-			<label for="unitOfMeasurementFrom" > From: </label>
-			<select id="unitOfMeasurementFrom">
-				<option value="none">---Choose Unit---</option>
-				<option value="F">F</option>
-				<option value="C">C</option>
-			</select>
-			<label for="unitOfMeasurementTo" > To: </label>
-			<select id="unitOfMeasurementTo">
-				<option value="none">---Choose Unit---</option>
-				<option value="F">F</option>
-				<option value="C">C</option>
-			</select>
-			<button id="convert" type="button" name="button">CONVERT</button>
-		</form>
-
-
-		<h2 id="conversion"></h2>
+			<form>
+				<label for="temp"> Temp: </label>
+				<input id="temp" type="text" placeholder="Temperature">
+				<label for="unitOfMeasurementFrom" > From: </label>
+				<select id="unitOfMeasurementFrom">
+					<option value="none">---Choose Unit---</option>
+					<option value="F">F</option>
+					<option value="C">C</option>
+				</select>
+				<label for="unitOfMeasurementTo" > To: </label>
+				<select id="unitOfMeasurementTo">
+					<option value="none">---Choose Unit---</option>
+					<option value="F">F</option>
+					<option value="C">C</option>
+				</select>
+				<button id="convert" type="button" name="button">CONVERT</button>
+			</form>
 
 
+			<h2 id="conversion"></h2>
+		</main>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

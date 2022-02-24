@@ -12,7 +12,25 @@
 /* LAYOUT
 /*******************************************/
 h1 {
-  color: blue;
+  color: limegreen;
+  font-size: 40px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 400;
+  color: yellow;
+}
+
+label {
+  font-size: 18px;
+  color: black;
+  font-weight: 400;
 }
 
 /******************************************
